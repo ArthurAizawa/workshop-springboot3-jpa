@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.educandoweb.course.entity.User;
 
 @RestController
-@RequestMapping(value = "/user")
+@RequestMapping(value = "/users")
 public class UserResource {
 
     @GetMapping
     public ResponseEntity<User> findAll(){
-        var user = new User((long) 1, "Arthur", "arthur@gmail.com","99999-9999","123");
-        return ResponseEntity.ok().body(user);
+        var u = new User((long) 1,"Arthur","arthur@fodido.com","99999-9999","123");
+        return ResponseEntity.ok().body(u);
     }
 }
